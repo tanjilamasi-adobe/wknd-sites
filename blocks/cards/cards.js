@@ -15,7 +15,7 @@ export default function decorate(block) {
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.replaceChildren(ul);
 
-  const body = li.querySelector('.cards-card-body');
+  // const body = li.querySelector('.cards-card-body');
   const iconParagraphs = body.querySelectorAll('p span.icon');
 
   if (iconParagraphs.length) {
