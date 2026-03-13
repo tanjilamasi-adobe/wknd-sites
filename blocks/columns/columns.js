@@ -1,17 +1,29 @@
 export default function decorate(block) {
-  const cols = [...block.firstElementChild.children];
+  const firstRow = block.firstElementChild;
+
+  if (!firstRow) {
+    return;
+  }
+
+  const cols = Array.from(firstRow.children);
   block.classList.add(`columns-${cols.length}-cols`);
 
-  // setup image columns
-  [...block.children].forEach((row) => {
-    [...row.children].forEach((col) => {
-      const pic = col.querySelector('picture');
-      if (pic) {
-        const picWrapper = pic.closest('div');
-        if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
-        }
+  const rows = Array.from(block.children);
+
+  rows.forEach((row) => {
+    const rowCols = Array.from(row.children);
+
+    rowCols.forEach((col) => {
+      const picture = col.querySelector('picture');
+
+      if (!picture) {
+        return;
+      }
+
+      const pictureWrapper = picture.closest('div');
+
+      if (pictureWrapper && pictureWrapper.children.length === 1) {
+        pictureWrapper.classList.add('columns-img-col');
       }
     });
   });

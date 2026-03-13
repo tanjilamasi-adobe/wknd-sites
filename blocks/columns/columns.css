@@ -19,15 +19,271 @@
   display: block;
 }
 
-@media (width >= 900px) {
+/* ============================= */
+/* Faqs Page styles */
+/* ============================= */
+.column.faq {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 78px 70px;
+  box-sizing: border-box;
+}
+
+.column.faq > div {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 0.72fr);
+  gap: 70px;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+.column.faq > div > div:first-child {
+  max-width: 980px;
+}
+
+.column.faq > div > div:first-child picture,
+.column.faq > div > div:first-child img {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.column.faq > div > div:first-child p {
+  font-size: 18px;
+  line-height: 2.1;
+  color: #202020;
+  margin: 0 0 18px;
+  text-align: justify;
+}
+
+/* RIGHT SIDE */
+.column.faq > div > div:last-child {
+  padding-top: 6px;
+  background: transparent !important;
+}
+
+.column.faq > div > div:last-child h3 {
+  margin: 0 0 26px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #202020;
+}
+
+.column.faq > div > div:last-child p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 2.5;
+  color: #202020;
+  margin: 0 0 14px;
+  text-align: left !important;
+  white-space: nowrap;
+}
+
+.column.faq > div > div:last-child a {
+  white-space: nowrap;
+}
+
+/* remove yellow background / button styling from links */
+.column.faq > div > div:last-child a,
+.column.faq > div > div:last-child a:link,
+.column.faq > div > div:last-child a:visited,
+.column.faq > div > div:last-child .button-container a,
+.column.faq > div > div:last-child p a {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #1a56ff !important;
+  text-decoration: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  display: inline !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.1;
+}
+
+.column.faq > div > div:last-child a:hover {
+  text-decoration: underline !important;
+}
+
+/* remove button container look if Franklin wrapped links */
+.column.faq > div > div:last-child .button-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.column.faq > div > div:last-child .button-container .button {
+  background: transparent !important;
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+/* ============================= */
+/* Responsive add-on only */
+/* ============================= */
+
+@media (max-width: 1200px) {
+  .column.faq {
+    padding: 0 48px 60px;
+  }
+
+  .column.faq > div {
+    grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.8fr);
+    gap: 48px;
+  }
+
+  .column.faq > div > div:first-child {
+    max-width: 100%;
+  }
+
+  .column.faq > div > div:first-child picture,
+  .column.faq > div > div:first-child img {
+    max-width: 100%;
+  }
+
+  .column.faq > div > div:first-child p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .column.faq > div > div:last-child h3 {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .column.faq > div > div:last-child p {
+    font-size: 13px;
+    line-height: 2.1;
+  }
+}
+
+@media (max-width: 900px) {
+  .column.faq {
+    padding: 0 20px 40px;
+  }
+
+  .column.faq > div {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .column.faq > div > div:first-child,
+  .column.faq > div > div:first-child picture,
+  .column.faq > div > div:first-child img {
+    max-width: 100%;
+  }
+
+  .column.faq > div > div:first-child p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .column.faq > div > div:last-child {
+    padding-top: 0;
+  }
+
+  .column.faq > div > div:last-child h3 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .column.faq > div > div:last-child p,
+  .column.faq > div > div:last-child a,
+  .column.faq > div > div:last-child a:link,
+  .column.faq > div > div:last-child a:visited {
+    font-size: 14px;
+    line-height: 1.9;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .column.faq > div > div:last-child a {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .column.faq {
+    padding: 0 16px 32px;
+  }
+
+  .column.faq > div {
+    gap: 28px;
+  }
+
+  .column.faq > div > div:first-child picture,
+  .column.faq > div > div:first-child img {
+    margin-bottom: 20px;
+  }
+
+  .column.faq > div > div:first-child p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .column.faq > div > div:last-child h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .column.faq > div > div:last-child p,
+  .column.faq > div > div:last-child a,
+  .column.faq > div > div:last-child a:link,
+  .column.faq > div > div:last-child a:visited,
+  .column.faq > div > div:last-child .button-container a,
+  .column.faq > div > div:last-child p a {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .column.faq {
+    padding: 0 12px 28px;
+  }
+
+  .column.faq > div {
     gap: 24px;
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .column.faq > div > div:first-child picture,
+  .column.faq > div > div:first-child img {
+    margin-bottom: 16px;
+  }
+
+  .column.faq > div > div:first-child p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .column.faq > div > div:last-child h3 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .column.faq > div > div:last-child p,
+  .column.faq > div > div:last-child a,
+  .column.faq > div > div:last-child a:link,
+  .column.faq > div > div:last-child a:visited,
+  .column.faq > div > div:last-child .button-container a,
+  .column.faq > div > div:last-child p a {
+    font-size: 12px;
+    line-height: 1.7;
   }
 }

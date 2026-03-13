@@ -1,0 +1,56 @@
+/* Base button */
+.button a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 32px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+/* Full Article style */
+.button.full-article a {
+  background: #ffe600;
+  color: #000;
+  border: none;
+}
+
+/* Hover effect */
+.button.full-article a:hover {
+  background: #ffd500;
+}
+
+/*Variation - all-trips */
+.button.all-trips a {
+  background: #ffe600;
+  color: #000;
+  border: none;
+}
+
+/* Hover effect */
+.button.all-trips a:hover {
+  background: #ffd500;
+}
+
+/* Responsive add-on */
+@media (max-width: 991px) {
+  .button a {
+    font-size: 13px;
+    padding: 12px 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button a {
+    font-size: 12px;
+    padding: 10px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button a {
+    font-size: 11px;
+    padding: 9px 18px;
+  }
+}

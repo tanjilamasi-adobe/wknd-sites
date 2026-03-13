@@ -1,0 +1,393 @@
+/* ============================= */
+/* Base Teaser (Shared Styles) */
+/* ============================= */
+
+.teaser {
+    display: flex;
+    margin: 40px auto;
+    max-width: 1150px;
+}
+
+.teaser > div {
+    display: flex;
+    width: 100%;
+}
+
+/* Image */
+
+.teaser .teaser-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.teaser .teaser-image picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+
+.teaser .teaser-body {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teaser h3 {
+    font-size: 2.2rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.teaser p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+/* Button */
+
+.teaser a.button {
+    background-color: var(--brandPrimary, #ffea00);
+    border-radius: var(--buttonBorderRadius, 0);
+    color: var(--textColor, #202020);
+    font-size: var(--fontSizeSmall, 14px);
+    padding: 1.2em 2.5em;
+    border: none;
+    display: inline-flex; /* Better than inline-block for alignment */
+    align-items: center;
+}
+
+/* ============================= */
+/* Featured Article Variation */
+/* teaser (featured-article) */
+/* ============================= */
+
+.teaser.featured-article {
+    background: #f0f0f0;
+}
+
+.teaser.featured-article .teaser-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.teaser.featured-article h3 {
+    font-family: "Source Serif Pro", Georgia, serif;
+    font-size: 2.5rem;
+}
+/* ============================= */
+/* New Adventures / Adventure Page */
+/* Reusable Teaser Variation */
+/* ============================= */
+
+/* section heading */
+#next-adventures,
+.teaser.new-adventures .teaser-body h2 {
+  font-weight: var(--fontWeightNormal, normal);
+}
+
+/* page heading above teaser */
+#next-adventures {
+  margin-left: 80px;
+  margin-top: 87px;
+  margin-bottom: 13.5px;
+}
+
+/* yellow underline for page heading */
+#next-adventures::after {
+  content: "";
+  display: block;
+  width: 84px;
+  border-bottom: 2px solid var(--brandPrimary, #ffea00);
+  padding-top: 8px;
+}
+
+/* teaser block */
+.teaser.new-adventures {
+  position: relative;
+  background: none;
+  margin: 0;
+  max-width: none;
+  display: block;
+}
+
+.teaser.new-adventures > div {
+  display: block;
+  position: relative;
+}
+
+/* image wrapper */
+.teaser.new-adventures .teaser-image {
+  width: 100%;
+  height: auto;
+}
+
+/* full-width image */
+.teaser.new-adventures .teaser-image picture img {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* overlapping white content box */
+.teaser.new-adventures .teaser-body {
+  position: absolute;
+  bottom: -20px;
+  left: 4%;
+  background: #fff;
+  padding: 1.2rem;
+  max-width: 1100px;
+  width: calc(100% - 8%);
+  z-index: 2;
+  min-height: 12rem;
+  box-sizing: border-box;
+}
+
+/* heading inside teaser */
+.teaser.new-adventures .teaser-body h2 {
+  font-size: 2.2rem;
+  margin: 0.1rem 0;
+  line-height: 1.2;
+}
+
+/* text inside teaser */
+.teaser.new-adventures .teaser-body p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* label if present */
+.teaser.new-adventures .teaser-label {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  #next-adventures {
+    margin-left: 40px;
+    margin-top: 60px;
+  }
+
+  .teaser.new-adventures .teaser-image picture img {
+    height: 500px;
+  }
+
+  .teaser.new-adventures .teaser-body {
+    left: 5%;
+    width: 90%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #next-adventures {
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  .teaser.new-adventures .teaser-image picture img {
+    width: 100%;
+    left: 0;
+    transform: none;
+    height: 320px;
+  }
+
+  .teaser.new-adventures .teaser-body {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .teaser.new-adventures .teaser-body h2 {
+    font-size: 1.8rem;
+  }
+
+  .teaser.new-adventures .teaser-body p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #next-adventures {
+    margin-left: 16px;
+    margin-top: 32px;
+  }
+
+  .teaser.new-adventures .teaser-image picture img {
+    height: 260px;
+  }
+
+  .teaser.new-adventures .teaser-body h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================= */
+/* Magazine Page styles */
+/* ============================= */
+
+.teaser-container .default-content-wrapper {
+    padding: 0 60px !important;
+}
+
+.magazine-article {
+    background-color: #ffea00;
+    margin-top: 0;
+}
+
+.magazine-article .teaser-body .button-wrapper {
+    text-transform: uppercase;
+}
+
+main .cards-container {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* ============================= */
+/* Adventure Page styles */
+/* ============================= */
+.teaser.adventure-page .teaser-body {
+  max-width: 1200px;
+}
+
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 900px) {
+    .teaser > div {
+        flex-direction: column;
+    }
+
+    .teaser .teaser-body {
+        padding: 2rem;
+    }
+
+    .teaser h3 {
+        font-size: 1.8rem;
+    }
+
+    .teaser.new-adventures .teaser-body {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .teaser.new-adventures .teaser-image {
+        height: 40vh;
+    }
+    @media (max-width: 900px) {
+        .teaser-container .default-content-wrapper {
+            padding: 0 30px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .teaser-container .default-content-wrapper {
+            padding: 0 16px;
+        }
+    }
+}
+@media (max-width: 900px) {
+    main .teaser-container,
+    main .cards-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    main .teaser-container,
+    main .cards-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
+/* australia article teaser */
+.teaser.australia-article,
+.teaser.australia-article > div {
+  display: block;
+  margin-bottom: -80px;
+}
+
+.teaser.australia-article.teaser-2-cols > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.teaser.australia-article .teaser-image,
+.teaser.australia-article .teaser-body {
+  width: 100%;
+  max-width: 100%;
+}
+
+.teaser.australia-article .teaser-image {
+  margin-bottom: 24px;
+}
+
+.teaser.australia-article .teaser-image picture {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  
+}
+.teaser.australia-article .teaser-body {
+  padding-left: 0;
+}
+
+.teaser.australia-article .teaser-body p,
+.teaser.australia-article .teaser-body .teaser-label {
+  margin-left: 0;
+  padding-left: 0;
+}
+.teaser.australia-article .teaser-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.teaser.australia-article .teaser-body {
+  display: block;
+  max-width: 760px;
+  margin: 0;
+  margin-top: -30px;
+}
+
+.teaser.australia-article .teaser-body .teaser-label,
+.teaser.australia-article .teaser-body p {
+  font-size: 18px;
+  line-height: 2.2;
+  color: #0f1720;
+  margin: 0 0 22px;
+  text-align: justify;
+  font-size: 16px;
+}

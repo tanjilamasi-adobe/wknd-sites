@@ -1,0 +1,178 @@
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.accordion-item {
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.accordion-title {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.accordion-title span:first-child {
+  flex: 1;
+  padding-right: 24px;
+}
+
+.accordion-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #111;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-icon::before {
+  width: 2px;
+  height: 28px;
+  transition: opacity 0.2s ease;
+}
+
+.accordion-icon::after {
+  width: 28px;
+  height: 2px;
+}
+
+.accordion-item.active .accordion-icon::before {
+  opacity: 0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content-inner {
+  padding: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.accordion-content-inner p {
+  margin: 0;
+}
+
+.accordion-title:focus {
+  outline: none;
+}
+
+.accordion-title:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1024px) {
+  .accordion {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .accordion-title {
+    font-size: 15px !important;
+  }
+
+  .accordion-title span:first-child {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    padding: 0 16px;
+  }
+
+  .accordion-title {
+    padding: 18px 0;
+    font-size: 14px !important;
+    align-items: flex-start;
+  }
+
+  .accordion-title span:first-child {
+    padding-right: 16px;
+    line-height: 1.5;
+  }
+
+  .accordion-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+
+  .accordion-icon::before {
+    height: 20px;
+  }
+
+  .accordion-icon::after {
+    width: 20px;
+  }
+
+  .accordion-content-inner {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    padding: 0 12px;
+  }
+
+  .accordion-title {
+    padding: 16px 0;
+    font-size: 13px !important;
+  }
+
+  .accordion-title span:first-child {
+    padding-right: 12px;
+  }
+
+  .accordion-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .accordion-icon::before {
+    width: 2px;
+    height: 18px;
+  }
+
+  .accordion-icon::after {
+    width: 18px;
+    height: 2px;
+  }
+
+  .accordion-content-inner {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 0 16px;
+  }
+}

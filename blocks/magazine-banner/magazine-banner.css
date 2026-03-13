@@ -1,0 +1,181 @@
+.magazine-page .section {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.magazine-banner {
+  max-width: 100%;
+}
+
+/* image wrapper */
+.magazine-banner > div:first-child {
+  width: 100%;
+}
+
+/* reduce banner height */
+.magazine-banner > div:first-child picture {
+  display: block;
+  width: 100%;
+}
+
+.magazine-banner > div:first-child img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+}
+
+/* breadcrumb row */
+.magazine-banner > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 32px 0;
+  flex-wrap: wrap;
+}
+
+.magazine-banner > div:last-child > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+/* remove default button look */
+.magazine-banner .button-wrapper {
+  margin: 0;
+}
+
+.magazine-banner a,
+.magazine-banner .button,
+.magazine-banner a.button,
+.magazine-banner a.button.primary,
+.magazine-banner a.button.secondary {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  color: #111;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  display: inline;
+  min-width: auto;
+}
+
+/* breadcrumb arrow */
+.magazine-banner > div:last-child > div:first-child::after {
+  content: "▶";
+  color: #f2dc00;
+  font-size: 18px;
+  margin-left: 14px;
+  margin-top: 12px;
+}
+
+/* second breadcrumb text */
+.magazine-banner > div:last-child > div:last-child p {
+  margin: 0;
+  color: #111;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+/* laptop */
+@media (max-width: 1199px) {
+  .magazine-page .section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .magazine-banner > div:first-child img {
+    aspect-ratio: 16 / 7.5;
+  }
+
+  .magazine-banner > div:last-child {
+    gap: 12px;
+    padding: 28px 0;
+  }
+
+  .magazine-banner a,
+  .magazine-banner .button,
+  .magazine-banner a.button,
+  .magazine-banner a.button.primary,
+  .magazine-banner a.button.secondary {
+    font-size: 12px;
+  }
+
+  .magazine-banner > div:last-child > div:first-child::after {
+    font-size: 16px;
+    margin-left: 12px;
+    margin-top: 8px;
+  }
+
+  .magazine-banner > div:last-child > div:last-child p {
+    font-size: 11px;
+    margin-top: 8px;
+  }
+}
+
+/* tablet */
+@media (max-width: 991px) {
+  .magazine-banner > div:last-child {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px 0;
+  }
+
+  .magazine-banner > div:last-child > div:first-child,
+  .magazine-banner > div:last-child > div:last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  .magazine-banner > div:last-child > div:first-child::after {
+    margin-left: 10px;
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .magazine-banner > div:last-child > div:last-child p {
+    margin-top: 0;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .magazine-banner a,
+  .magazine-banner .button,
+  .magazine-banner a.button,
+  .magazine-banner a.button.primary,
+  .magazine-banner a.button.secondary {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 767px) {
+  .magazine-banner > div:last-child {
+    gap: 6px;
+    padding: 16px 0;
+  }
+
+  .magazine-banner > div:last-child > div:first-child::after {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  .magazine-banner > div:last-child > div:last-child p,
+  .magazine-banner a,
+  .magazine-banner .button,
+  .magazine-banner a.button,
+  .magazine-banner a.button.primary,
+  .magazine-banner a.button.secondary {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+}
