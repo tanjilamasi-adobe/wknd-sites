@@ -49,17 +49,18 @@ footer .columns > div > div:nth-child(2) {
   max-width: 650px;
 }
 
-footer .columns > div > div:nth-child(2) p a {
-  color: #ffffff;
-  text-decoration: none;
+footer .columns > div > div:nth-child(2) p {
+  margin: 0;
   font-size: 13.5px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-footer .columns > div > div:nth-child(2) p a:hover {
+footer .columns > div > div:nth-child(2) p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 /* ================= */
 /* Follow Us column */
 /* ================= */
@@ -79,7 +80,7 @@ footer .columns > div > div:nth-child(3) p:first-child {
   font-weight: 500;
   text-transform: uppercase;
   white-space: nowrap;
-  color: white;
+  text
 }
 
 /* white icon box */
