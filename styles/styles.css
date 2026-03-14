@@ -314,8 +314,8 @@ main > .section {
 }
 
 main > .section > div {
-    max-width: none !important; /* Allows carousel to touch the screen edges */
-    padding: 0 !important; /* Removes side gaps */
+    max-width: none !important; 
+    padding: 0 !important; 
     margin: 0 !important;
 }
 
@@ -348,6 +348,7 @@ main .section.highlight {
   margin-bottom: 40px;
   position: relative;
 }
+
 
 .articles .default-content-wrapper h2::after {
   content: "";
@@ -410,3 +411,57 @@ main .section.highlight {
   font-size: 35px;
   font-weight: 200;
 }
+/* ============================================================================================ */
+/* adventure sub-page title */
+.section.mytitle .default-content-wrapper p {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  color: #111;
+}
+.section.mytitle .default-content-wrapper p::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #ffe600;
+  margin-top: 12px;
+}
+
+
+main{
+    margin-top: 140px;
+}
+
+/* remove page side padding on mobile */
+@media (max-width: 600px) {
+
+  main .section {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .default-content-wrapper {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  main .section {
+    padding-left: 6px !important;
+    padding-right: 0px !important;
+    margin-right: 3px !important;
+  }
+
+  .default-content-wrapper {
+    padding-left: 6px !important;
+    padding-right: 0px !important;
+  }
+
+}
+

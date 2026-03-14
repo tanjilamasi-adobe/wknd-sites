@@ -69,6 +69,7 @@
 
 .teaser.featured-article {
     background: #f0f0f0;
+    margin: 50px;
 }
 
 .teaser.featured-article .teaser-label {
@@ -96,7 +97,7 @@
 
 /* page heading above teaser */
 #next-adventures {
-  margin-left: 80px;
+  margin-left: 20px;
   margin-top: 87px;
   margin-bottom: 13.5px;
 }
@@ -179,69 +180,23 @@
 /* Responsive */
 /* ============================= */
 
-@media (max-width: 1024px) {
-  #next-adventures {
-    margin-left: 40px;
-    margin-top: 60px;
-  }
-
-  .teaser.new-adventures .teaser-image picture img {
-    height: 500px;
-  }
-
-  .teaser.new-adventures .teaser-body {
-    left: 5%;
-    width: 90%;
-    max-width: none;
-  }
-}
-
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 992px) {
   #next-adventures {
     margin-left: 20px;
-    margin-top: 40px;
-  }
-
-  .teaser.new-adventures .teaser-image picture img {
-    width: 100%;
-    left: 0;
-    transform: none;
-    height: 320px;
-  }
-
-  .teaser.new-adventures .teaser-body {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    min-height: auto;
-  }
-
-  .teaser.new-adventures .teaser-body h2 {
-    font-size: 1.8rem;
-  }
-
-  .teaser.new-adventures .teaser-body p {
-    font-size: 0.95rem;
+    margin-top: 60px;
+    margin-bottom: 12px;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 768px) {
   #next-adventures {
-    margin-left: 16px;
-    margin-top: 32px;
-  }
-
-  .teaser.new-adventures .teaser-image picture img {
-    height: 260px;
-  }
-
-  .teaser.new-adventures .teaser-body h2 {
-    font-size: 1.5rem;
+    margin-left: -60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 }
-
 /* ============================= */
 /* Magazine Page styles */
 /* ============================= */
@@ -390,4 +345,77 @@ main .cards-container {
   margin: 0 0 22px;
   text-align: justify;
   font-size: 16px;
+}
+
+/* Remove underline from FULL ARTICLE */
+.teaser .button-wrapper a.button u {
+  text-decoration: none;
+}
+
+/* Remove hover underline/effect */
+.teaser .button-wrapper a.button,
+.teaser .button-wrapper a.button:hover,
+.teaser .button-wrapper a.button:focus {
+  text-decoration: none;
+}
+
+#adventures {
+  padding-left: 20px;
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  #adventures {
+    margin-left: -69px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  #adventures {
+    padding-left: 12px;
+
+  }
+}
+/* Desktop / Laptop */
+.western-australia-container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .western-australia-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .western-australia-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* Desktop */
+.western {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .western {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .western {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

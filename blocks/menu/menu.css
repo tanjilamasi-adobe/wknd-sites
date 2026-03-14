@@ -1,0 +1,159 @@
+.menu-wrapper {
+  align-self: flex-start;
+}
+ 
+.menu {
+  position: sticky;
+  top: 120px;
+  width: 100%;
+  max-width: 280px;
+  align-self: flex-start;
+}
+ 
+.menu .menu-list::before {
+  content: '';
+  display: block;
+  width: 170px;
+  height: 4px;
+  background: #d6de00;
+  margin: 0 0 42px;
+}
+ 
+.menu .menu-item {
+  border-left: 6px solid #e7e7e7;
+  padding-left: 28px;
+  margin-bottom: 34px;
+  min-height: 92px;
+}
+ 
+.menu .menu-label {
+  margin: 0 0 14px;
+  color: #6b6b6b;
+  font-size: 14px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+ 
+.menu .menu-value {
+  margin: 0;
+  color: #111;
+  font-size: 18px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+ 
+.menu .menu-label p,
+.menu .menu-value p {
+  margin: 0;
+}
+ 
+.menu .menu-value a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+@media (max-width: 899px) {
+  .menu {
+    position: static;
+    top: auto;
+    max-width: 100%;
+  }
+ 
+  .menu .menu-list::before {
+    width: 120px;
+    margin-bottom: 28px;
+  }
+ 
+  .menu .menu-item {
+    border-left-width: 4px;
+    padding-left: 22px;
+    margin-bottom: 24px;
+    min-height: auto;
+  }
+ 
+  .menu .menu-label {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+ 
+  .menu .menu-value {
+    font-size: 16px;
+  }
+}
+ 
+/* increase left menu column width */
+.adventure-layout {
+  grid-template-columns: 260px 1fr !important;
+  column-gap: 80px !important;
+}
+ 
+/* menu width */
+.adventure-menu,
+.menu {
+  width: 350px !important;
+  max-width: 350px !important;
+}
+ 
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+ 
+  .adventure-layout {
+    grid-template-columns: 220px 1fr !important;
+    column-gap: 50px !important;
+  }
+ 
+  .menu,
+  .adventure-menu {
+    width: 260px !important;
+    max-width: 260px !important;
+  }
+ 
+  .menu {
+    top: 100px;
+  }
+ 
+}
+ 
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+ 
+  .adventure-layout {
+    grid-template-columns: 1fr !important;
+    row-gap: 40px;
+  }
+ 
+  .menu,
+  .adventure-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+ 
+  .menu {
+    position: static;
+    top: auto;
+  }
+ 
+  .menu .menu-list::before {
+    width: 120px;
+  }
+ 
+}
+ 
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+ 
+  .menu .menu-item {
+    padding-left: 18px;
+  }
+ 
+  .menu .menu-value {
+    font-size: 15px;
+  }
+ 
+  .menu .menu-label {
+    font-size: 12px;
+  }
+}
+ 

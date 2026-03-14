@@ -591,6 +591,133 @@
   justify-content: center;
 }
 
+/* ============================= */
+/* climbing-cards variation */
+/* ============================= */
+.cards.climbing-cards > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding: 0;
+  margin: 0;
+}
+
+.cards.climbing-cards > ul > li {
+  display: block;
+  border: none;
+  background: transparent;
+  padding-left: 22px;
+  position: relative;
+}
+
+/* left vertical line */
+.cards.climbing-cards > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #ebebeb;
+}
+
+/* remove default margin */
+.cards.climbing-cards .cards-card-body {
+  margin: 0;
+}
+
+/* label */
+.cards.climbing-cards .cards-card-body:first-child {
+  font-size: 13px;
+  color: #777;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* content text */
+.cards.climbing-cards .cards-card-body:last-child {
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* tablet */
+@media (max-width: 991px) {
+  .cards.climbing-cards > ul {
+    gap: 28px;
+  }
+
+  .cards.climbing-cards > ul > li {
+    padding-left: 18px;
+  }
+
+  .cards.climbing-cards > ul > li::before {
+    width: 3px;
+  }
+
+  .cards.climbing-cards .cards-card-body:first-child {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .cards.climbing-cards .cards-card-body:last-child {
+    font-size: 15px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .cards.climbing-cards > ul {
+    gap: 22px;
+  }
+
+  .cards.climbing-cards > ul > li {
+    padding-left: 14px;
+  }
+
+  .cards.climbing-cards > ul > li::before {
+    width: 3px;
+  }
+
+  .cards.climbing-cards .cards-card-body:first-child {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .cards.climbing-cards .cards-card-body:last-child {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+  .cards.climbing-cards > ul {
+    gap: 18px;
+  }
+
+  .cards.climbing-cards > ul > li {
+    padding-left: 12px;
+  }
+
+  .cards.climbing-cards > ul > li::before {
+    width: 2px;
+  }
+
+  .cards.climbing-cards .cards-card-body:first-child {
+    font-size: 10px;
+  }
+
+  .cards.climbing-cards .cards-card-body:last-child {
+    font-size: 13px;
+  }
+}
+
+/* remove extra paragraph spacing */
+.cards.climbing-cards p {
+  margin: 0;
+}
+
 /* tablet */
 @media (max-width: 991px) {
   .cards.article-profile > ul > li {
@@ -672,12 +799,23 @@
   position: absolute;
   right: 40px;
   top: 920px;
-  width: 300px;
+  width: 200px;
   max-width: 100%;
   z-index: 2;
   margin: 0;
 }
+@media (max-width: 1024px) {
 
+  .cards.related-articles {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+}
 /* reset cards list */
 .cards.related-articles > ul {
   display: block;

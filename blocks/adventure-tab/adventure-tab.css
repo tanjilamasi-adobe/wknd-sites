@@ -1,0 +1,276 @@
+.right-div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.right-div .adventure-tab {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* tab nav */
+.right-div .adventure-tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin: 0 0 32px;
+  padding: 0;
+}
+
+/* tab button */
+.right-div .adventure-tab-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  padding: 12px 14px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.right-div .adventure-tab-button.is-active {
+  background: #111;
+  color: #fff;
+}
+
+/* panels */
+.right-div .adventure-tab-panels {
+  width: 100%;
+}
+
+.right-div .adventure-tab-panel {
+  display: none;
+  width: 100%;
+}
+
+.right-div .adventure-tab-panel.is-active {
+  display: block;
+}
+
+/* headings */
+.right-div .adventure-tab-panel h1,
+.right-div .adventure-tab-panel h2,
+.right-div .adventure-tab-panel h3,
+.right-div .adventure-tab-panel h4,
+.right-div .adventure-tab-panel h5,
+.right-div .adventure-tab-panel h6 {
+  margin: 0 0 28px;
+  color: #111;
+  font-size: 38px;
+  line-height: 1.18;
+  font-weight: 300;
+  max-width: 980px;
+}
+
+/* paragraphs */
+.right-div .adventure-tab-panel p {
+  margin: 0 0 22px;
+  color: #111;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 980px;
+}
+
+/* image */
+.right-div .adventure-tab-panel picture {
+  display: block;
+  margin: 0 0 28px;
+  max-width: 980px;
+}
+
+.right-div .adventure-tab-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* lists */
+.right-div .adventure-tab-panel ul,
+.right-div .adventure-tab-panel ol {
+  margin: 0 0 22px 22px;
+  padding: 0;
+  max-width: 980px;
+}
+
+.right-div .adventure-tab-panel li {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #111;
+}
+
+/* spacing reset for first element */
+.right-div .adventure-tab-panel > *:first-child {
+  margin-top: 0;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .right-div .adventure-tab-nav {
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .right-div .adventure-tab-button {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+
+  .right-div .adventure-tab-panel h1,
+  .right-div .adventure-tab-panel h2,
+  .right-div .adventure-tab-panel h3,
+  .right-div .adventure-tab-panel h4,
+  .right-div .adventure-tab-panel h5,
+  .right-div .adventure-tab-panel h6 {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .right-div .adventure-tab-panel p,
+  .right-div .adventure-tab-panel li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .right-div .adventure-tab-panel picture {
+    margin-bottom: 22px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .right-div .adventure-tab-nav {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .right-div .adventure-tab-button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .right-div .adventure-tab-panel h1,
+  .right-div .adventure-tab-panel h2,
+  .right-div .adventure-tab-panel h3,
+  .right-div .adventure-tab-panel h4,
+  .right-div .adventure-tab-panel h5,
+  .right-div .adventure-tab-panel h6 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .right-div .adventure-tab-panel p,
+  .right-div .adventure-tab-panel li {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .right-div .adventure-tab-panel picture {
+    margin-bottom: 18px;
+  }
+
+  .right-div .adventure-tab-panel ul,
+  .right-div .adventure-tab-panel ol {
+    margin-left: 18px;
+  }
+}
+
+/* left right div */
+.left-div,
+.right-div {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* left card column */
+.left-div {
+  width: 260px;
+  margin-right: 70px;
+}
+
+/* right tabs/content column */
+.right-div {
+  width: calc(100% - 330px);
+}
+
+/* make right content fill properly */
+.right-div .adventure-tab {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .left-div {
+    width: 220px;
+    margin-right: 40px;
+  }
+
+  .right-div {
+    width: calc(100% - 260px);
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .left-div,
+  .right-div {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .left-div {
+    margin-bottom: 30px;
+  }
+}
+
+/* text container formatting */
+.right-div .adventure-tab-panel {
+  max-width: 900px;
+}
+
+/* heading formatting */
+.right-div .adventure-tab-panel h1,
+.right-div .adventure-tab-panel h2,
+.right-div .adventure-tab-panel h3,
+.right-div .adventure-tab-panel h4,
+.right-div .adventure-tab-panel h5,
+.right-div .adventure-tab-panel h6 {
+  max-width: 900px;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+/* paragraph formatting */
+.right-div .adventure-tab-panel p {
+  max-width: 900px;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 26px;
+  text-align: justify;
+}
+
+/* image spacing */
+.right-div .adventure-tab-panel picture {
+  margin-bottom: 32px;
+}
+
+/* lists */
+.right-div .adventure-tab-panel ul,
+.right-div .adventure-tab-panel ol {
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+
+.right-div .adventure-tab-panel li {
+  line-height: 1.9;
+}

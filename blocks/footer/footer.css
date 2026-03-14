@@ -27,7 +27,7 @@ footer .columns > div {
 /* ================= */
 
 footer .columns-img-col {
-  width: 140px;
+  width: 120px;
 }
 
 footer .columns-img-col img {
@@ -43,9 +43,10 @@ footer .columns-img-col img {
 footer .columns > div > div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 35px;
+  gap: 18px 28px;
   align-items: center;
   margin-top: 15px;
+  max-width: 650px;
 }
 
 footer .columns > div > div:nth-child(2) p {
@@ -74,8 +75,8 @@ footer .columns > div > div:nth-child(3) {
 
 footer .columns > div > div:nth-child(3) p:first-child {
   margin: 0;
-  padding-right: 8px;
-  font-size: 16px;
+  padding-right: 95px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   white-space: nowrap;
@@ -87,15 +88,15 @@ footer .columns > div > div:nth-child(3) p:not(:first-child) {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 12px 10px;
+  padding: 6px 3px;
   background: #fff;
 }
 
 /* icon size */
 footer .icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 footer .icon svg {
@@ -115,12 +116,9 @@ footer .default-content-wrapper p {
   margin-bottom: 18px;
   font-size: 11.6px;
   line-height: 1.6;
+  text-align: justify;
 }
 
-/* Links */
-footer a {
-  color: #5ea0ff;
-}
 
 /* ================= */
 /* Large tablet */
@@ -141,39 +139,69 @@ footer a {
   }
 
   footer .columns > div > div:nth-child(2) {
-    gap: 18px 24px;
+    gap: 16px 22px;
+    max-width: 100%;
   }
 
   footer .columns > div > div:nth-child(2) p {
     white-space: normal;
   }
+  footer .columns > div > div:nth-child(3) p:not(:first-child) {
+  padding: 5px 3px;
+  padding-top: 1px;
+  padding-bottom: 8px;
+  background: #fff;
+}
 }
 
 /* ================= */
 /* Tablet */
 /* ================= */
 
+/* ================= */
+/* Tablet + Mobile */
+/* ================= */
+
 @media (max-width: 900px) {
+  footer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  footer .footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
   footer .footer > div {
-    padding: 24px 24px 32px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 24px 5px 32px;
+    box-sizing: border-box;
   }
 
   footer .columns > div {
     grid-template-columns: 1fr;
-    gap: 24px;
-    margin-bottom: 30px;
+    gap: 28px;
+    margin: 0 0 30px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   footer .columns-img-col {
-    width: 120px;
+    width: 110px;
   }
 
   footer .columns > div > div:nth-child(2) {
+    justify-content: flex-start;
+    gap: 14px 18px;
+    max-width: 100%;
     margin-top: 0;
-    gap: 16px 20px;
   }
 
   footer .columns > div > div:nth-child(2) p {
+    font-size: 13px;
     white-space: normal;
   }
 
@@ -187,8 +215,18 @@ footer a {
     padding-right: 0;
   }
 
+  footer .default-content-wrapper,
   footer .default-content-wrapper p {
-    font-size: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  footer .default-content-wrapper p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
   }
 }
 
@@ -198,68 +236,24 @@ footer a {
 
 @media (max-width: 600px) {
   footer .footer > div {
-    padding: 20px 16px 28px;
-  }
-
-  footer .columns-img-col {
-    width: 100px;
-  }
-
-  footer .columns > div > div:nth-child(2) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  footer .columns > div > div:nth-child(2) p {
-    font-size: 13px;
-    white-space: normal;
-  }
-
-  footer .columns > div > div:nth-child(3) {
-    align-items: flex-start;
-  }
-
-  footer .columns > div > div:nth-child(3) p:first-child {
-    font-size: 13px;
-  }
-
-  footer .columns > div > div:nth-child(3) p:not(:first-child) {
-    padding: 10px 8px;
-  }
-
-  footer .icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  footer .default-content-wrapper p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-
-/* ================= */
-/* Small mobile */
-/* ================= */
-
-@media (max-width: 480px) {
-  footer .footer > div {
-    padding: 18px 12px 24px;
+    padding: 20px 5px 24px;
   }
 
   footer .columns > div {
-    gap: 20px;
+    gap: 22px;
     margin-bottom: 24px;
   }
 
   footer .columns-img-col {
-    width: 90px;
+    width: 95px;
+  }
+
+  footer .columns > div > div:nth-child(2) {
+    gap: 10px 14px;
   }
 
   footer .columns > div > div:nth-child(2) p {
     font-size: 12px;
-    line-height: 1.4;
   }
 
   footer .columns > div > div:nth-child(3) {
@@ -270,17 +264,7 @@ footer a {
     font-size: 12px;
   }
 
-  footer .columns > div > div:nth-child(3) p:not(:first-child) {
-    padding: 8px 7px;
-  }
-
-  footer .icon {
-    width: 18px;
-    height: 18px;
-  }
-
   footer .default-content-wrapper p {
-    margin-bottom: 14px;
     font-size: 12px;
     line-height: 1.5;
   }
